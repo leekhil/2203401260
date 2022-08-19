@@ -1,0 +1,34 @@
+1.login to aws console
+2.search for EC2 in search bar provided
+3.click on EC2
+4.provide name to ec2 machine under Name and tags
+5.under Application and OS Images (Amazon Machine Image) field
+select the free tier ubuntu machine 
+6.under key pair feild click on ->create a new key pair
+6.1provide a proper name to key
+6.2 save this key in a save folder
+7.click on launch instance
+8.again from the side bar select instance
+and select the instance which you have created
+9.connecting to instance (click on the connect ->again you will find one more conect button by click on that button you will be redirected to your instance)
+10.install the requirements on instance
+to install apache server  type 
+1.apt install apache2
+2.sudo ufw allow 'Apache'
+3.sudo systemctl status apache2
+then to start apache server type 
+
+to set inbounnd and outbond 
+1.under instance 
+go to security ->click on securityGroup
+now you can set inbound and out bounds for your instance
+click on edit  inbound rules
+add rule -> type(http)->protocol(tcp)->portrange(80)->source(custom)->description (optional)
+
+
+to check this apache server
+1.you need public ip of your instance (you ca n get it from instace information)
+2.type this on any machine which has internet 
+you instance_publicip:port(generally 80 beacuse apache servers on port 80)
+ 18.212.236.22:80
+you will get apache server on your local machine

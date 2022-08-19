@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  mqtt_broker:
+    image: eclipse-mosquitto
+    container_name: broker
+    volumes:
+        - /home/diot/Edge_computing/multiple_containers/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    expose:
+      - 1883
+    ports:
+      - "6502:1883"
+  mqtt-sub:
+    build: ./subscriber
+    container_name: subscriber_js
+    depends_on:
+      - mqtt_broker

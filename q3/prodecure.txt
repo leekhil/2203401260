@@ -1,0 +1,27 @@
+login to aws console
+search for IAM
+under iam select user (from left corner of the page)
+->click on add user
+->enter the name for user
+Select AWS credential type
+->check this box Password - AWS Management Console access
+click->next:permission
+if you want to add user to group you can select add user to group 
+else  click->attach existing policies directly
+attach policies search for EC2 and give the permission to AmazonEC2FullAccess
+and search for Lambda and  select AWSLambda_FullAccess 
+user has only access to 
+AmazonEC2FullAccess
+AWSLambda_FullAccess
+
+click on Netx:tags
+again click on Netx:tags
+
+click->create user
+
+now you can send credential to the user by mail
+
+now you have succesfully created user 
+
+now you can login to aws iam console by provided credentials
+if user click any other service then EC2 and Lambda he will get permission denied error

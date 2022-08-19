@@ -1,0 +1,8 @@
+{
+    "patient-name":"xyz",
+    "body-temperature":"34",
+    "blood-pressure":"120-hg",
+    "pulse-rate":"92BPM",
+    "weight":"162 lbs",
+    "region":"us-east"
+}

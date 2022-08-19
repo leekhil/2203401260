@@ -1,0 +1,31 @@
+creaete a docker-compose.yml file 
+create a 2 services 
+1.mqtt-sub(run this service after running mqtt-broker service)
+
+2.mqtt-broker
+expose the port of service on - 1883
+bind ports of local machine and container 
+      - "5001:1883"
+
+create a subscriber named folder and write the code for dockerfile and subscriber.js
+
+compose the docker-compose.yml by typing
+
+docker compose up
+
+go to new terminal and check the publisher 
+type the following command
+mosquitto_pub -t test/sensor-data -h localhost -p 6502 -m "{"lat":18.5415,"lon":73.7925,"country":"india","ts":1660804447}" -d
+
+Client null sending CONNECT
+Client null received CONNACK (0)
+Client null sending PUBLISH (d0, q0, r0, m1, 'test/sensor-data', ... (53 bytes))
+Client null sending DISCONNECT
+
+publish ack is recieved that means the data is published successfully 
+
+
+
+
+
+

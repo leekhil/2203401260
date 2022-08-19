@@ -1,0 +1,31 @@
+check the link for post data to post man 
+
+https://demo.thingsboard.io/api/v1/ACCESS_TOKEN/telemetry
+
+to get access token goto device and check manage credentials 
+
+
+you can use above link to post data to thingsboard
+in header section on post man select
+key as content-type
+value as application/json
+
+add the following data in body section (under raw)
+{
+    "patient-name":"xyz",
+    "body-temperature":"34",
+    "blood-pressure":"120-hg",
+    "pulse-rate":"92BPM",
+    "weight":"162 lbs",
+    "region":"us-east"
+}
+
+the above line are the data which is going to be posted on thingsboard
+
+
+mosquitto_pub -d -q 1 -h "demo.thingsboard.io" -t "v1/devices/me/telemetry" -u "leekhil@123" -f "data.json"
+
+you can do this by using mosquitto_pub
+(sir ye data post nai hora error dikhara so mere pas abhi time nai hai ghar jaa k solve kardeta mai  
+)
+thankyou sir

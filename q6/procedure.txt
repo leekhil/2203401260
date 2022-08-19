@@ -1,0 +1,24 @@
+docker commands
+
+git init (initializing a git repository)
+
+git clone <repo link> (to clone repository)
+
+git add <file name> (to add file into staging area)
+
+git --cache <file name> (to remove files from staging stage)
+
+git status (to get the status of the files)
+
+git  commit -m "message which you want to add"
+
+git branch (to check the current branch)
+
+git push -u origin branch_name 
+username:
+password:(enter token here)
+
+to get token (login to github )
+->setting
+    ->developer settings
+    ->generate token
